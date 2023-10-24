@@ -1,0 +1,79 @@
+@font-face {
+	font-weight: 400; /* Соответствует значению normal */
+	font-family: Roobert;
+	src: url("../Roobert/Roobert-Regular.otf");
+ }
+ @font-face {
+	font-weight: 500; /* Соответствует значению normal */
+	font-family: Roobert;
+	src: url("../Roobert/Roobert-Medium.otf");
+ }
+ @font-face {
+	font-weight: 700; /* Соответствует значению bold */
+	font-family: Roobert;
+	src: url("../Roobert/Roobert-SemiBold.otf");
+ }
+ 
+ @font-face {
+	font-weight: 300;
+	font-family: Roobert;
+	src: url("../Roobert/Roobert-Light.otf");
+ }
+
+ 
+
+body {
+	overscroll-behavior: none;
+	overflow-x: hidden;
+	cursor: none;
+}
+body::-webkit-scrollbar {
+	width: 0px;
+
+}
+
+* {
+	-ms-user-select: none; 
+		-moz-user-select: none; 
+		-webkit-user-select: none; 
+		user-select: none; 
+	margin: 0;
+	padding: 0;
+	font-family: Roobert;
+	font-weight: 400;
+	box-sizing: border-box;
+}
+#container {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	z-index: -1;
+}
+canvas {
+	display: block;
+}
+ 
+.cursor-dot {
+	width: 5px;
+	height: 5px;
+	background-color: #9b9b9b;
+}
+.cursor-outline {
+	width: 50px;
+	height: 50px;
+	border: 2px solid hsla(0, 0%, 79%, 0.5);
+}
+.cursor-dot, .cursor-outline {
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	pointer-events: none;
+}
+
+@import url(./main.css);
